@@ -1,0 +1,31 @@
+{
+  "name": "copy-resources",
+  "version": "1.0.0",
+  "description": "Copy text, images, files, and other resources to the clipboard",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdoycn/copy-resources.git"
+  },
+  "keywords": [
+    "clipboard",
+    "copy",
+    "file"
+  ],
+  "author": "bdoycn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bdoycn/copy-resources/issues"
+  },
+  "homepage": "https://github.com/bdoycn/copy-resources#readme",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "img-to-blob": "^1.0.0"
+  }
+}
