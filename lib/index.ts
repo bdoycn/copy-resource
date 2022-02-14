@@ -3,6 +3,7 @@ import BlobResource from "./resources/BlobResource";
 import FileResource from "./resources/FileResource";
 import ImgResource from "./resources/ImgResource";
 import TextResource from "./resources/TextResource";
+export { default as UrlResource } from "./resources/UrlResource";
 
 const checkCompatibility = () => {
   if (!(navigator.clipboard && window.ClipboardItem)) {
