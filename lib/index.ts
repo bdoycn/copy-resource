@@ -12,19 +12,20 @@ const checkCompatibility = () => {
 
 const buildResource = (resource: ResourceRawType) => {
   if (typeof resource === 'string') {
-    return new TextResource({ content: resource });
+    return new TextResource(resource);
   } else if (resource instanceof File) {
-    return new FileResource({ content: resource });
+    return new FileResource(resource);
   } else if (resource instanceof Blob) {
-    return new BlobResource({ content: resource });
+    return new BlobResource(resource);
   } else if (resource instanceof HTMLImageElement) {
-    return new ImgResource({ img: resource });
+    return new ImgResource(resource);
   } else {
     throw new Error('Invalid resource');
   }
 }
 
 export const copyResource: CopyResource = async (resource) => {
+  // 检测兼容性
   checkCompatibility();
 
   // 初始化资源实例

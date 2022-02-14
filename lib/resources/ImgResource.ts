@@ -4,13 +4,10 @@ import BaseResource from "./BaseResource";
 export default class ImgResource extends BaseResource {
   protected img: HTMLImageElement;
 
-  constructor(options: ImgResourceOptions) {
-    super({
-      type: 'blob',
-      content: '',
-    });
+  constructor(img: HTMLImageElement) {
+    super({ type: 'blob' });
 
-    ({ img: this.img } = options);
+    this.img = img;
   }
 
   async getContent(): Promise<ResourceContent> {

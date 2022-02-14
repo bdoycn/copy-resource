@@ -1,15 +1,12 @@
 import BaseResource from "./BaseResource";
 
 export default class UrlResource extends BaseResource {
-  protected url = '';
+  protected url;
   
-  constructor(options: UrlResourceOptions) {
-    super({
-      type: 'blob',
-      content: '',
-    });
-    
-    ({ url: this.url } = options);
+  constructor(url: string) {
+    super({ type: 'blob' });
+
+    this.url = url;
   }
 
   async getContent(): Promise<ResourceContent> {

@@ -1,12 +1,10 @@
 export default abstract class BaseResource {
-  public type = 'text' as ResourceTypes;
-  protected content = '' as ResourceContent;
+  public type: ResourceTypes;
+  protected content: ResourceContent;
 
   constructor(options: ResourceOptions) {
-    ({
-      type: this.type,
-      content: this.content,
-    } = options);
+    this.type = options.type;
+    this.content = options.content ?? '';
   }
 
   async getContent(): Promise<ResourceContent> {

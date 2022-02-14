@@ -1,12 +1,10 @@
 import BaseResource from "./BaseResource";
 
 export default class TextResource extends BaseResource {
-  constructor(options: TextResourceOptions) {
-    const { content } = options;
-
+  constructor(text: string) {
     super({
       type: 'text',
-      content,
+      content: text,
     });
   }
 }
