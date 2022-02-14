@@ -1,6 +1,6 @@
 {
   "name": "copy-resource",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Copy text, images, files, and other resources to the clipboard",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
