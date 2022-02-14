@@ -2,7 +2,7 @@ CopyResource
 ============
 使用现代化的 clipboard API 将各种资源复制到剪辑板
 
-支持文本、图片、文件等
+目前支持文本、图片、HTML, 其他类型需等待 clipboard API 支持
 
 ```ts
 const { copyResource } = import 'copy-resource';
@@ -17,19 +17,9 @@ copyResource(text)
 const img = document.querySelector('#logo');
 copyResource(img);
 
-// 复制文件
-fetch('https://xxx')
-  .then((response) => {
-    if (!response.ok) throw new Error('fetch file failed');
-    return response.blob();
-  })
-  .then((file) => {
-    copyResource(file);
-  })
-
-// 复制网址指向的资源
+// 获取当前网页 html 内容
 // 为了分辨是文本还是网址 需要构建 UrlResource 对象
-copyResource(new UrlResource('https://xxx'));
+copyResource(new UrlResource('./'));
 ```
 
 ## 浏览器支持
