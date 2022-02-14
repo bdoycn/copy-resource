@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bdoycn/copy-resources.git"
+    "url": "git+https://github.com/bdoycn/copy-resource.git"
   },
   "keywords": [
     "clipboard",
@@ -20,9 +20,9 @@
   "author": "bdoycn",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bdoycn/copy-resources/issues"
+    "url": "https://github.com/bdoycn/copy-resource/issues"
   },
-  "homepage": "https://github.com/bdoycn/copy-resources#readme",
+  "homepage": "https://github.com/bdoycn/copy-resource#readme",
   "devDependencies": {
     "typescript": "^4.5.5"
   },
